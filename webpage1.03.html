@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white; 
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<img src="https://storage.googleapis.com/afs-prod/media/afs:Medium:6906200015/775.jpeg" alt="Snow" style="width:100%;">
+  <div class="centered">◉▶𝙏𝙚𝙘𝙝𝙣𝙤𝙡𝙤𝙜𝙮◁◎</div>
+</div>
+
+
+<h2>All about technology</h2>
+<p>Click on the buttons to know more about them</p>
+
+<button class="accordion">𝘞𝘩𝘢𝘵 𝘪𝘴 𝘵𝘦𝘤𝘩𝘯𝘰𝘭𝘰𝘨𝘺?</button>
+<div class="panel">
+  <p>Technology is the application of scientific knowledge for practical purposes, especially in industry.</p>
+</div>
+
+<button class="accordion">𝘞𝘩𝘢𝘵 𝘥𝘰𝘦𝘴 𝘵𝘦𝘤𝘩𝘯𝘰𝘭𝘰𝘨𝘺 𝘩𝘦𝘭𝘱 𝘸𝘪𝘵𝘩?</button>
+<div class="panel">
+  <p>Technology has played a crucial role in keeping so many people alive through life support machines and other specialized health equipment. Technology also aids in the scientific research of new medicines and cures that are beneficial to the entire human race.It also keeps us entertained.</p>
+</div>
+
+<button class="accordion">𝘚𝘰𝘮𝘦 𝘦𝘹𝘢𝘮𝘱𝘭𝘦𝘴 𝘰𝘧 𝘵𝘦𝘤𝘩𝘯𝘰𝘭𝘰𝘨𝘺</button>
+<div class="panel">
+  <p>Whether it's practical (like washing machines, tumble dryers, refrigerators, cars, flooring materials, windows, or door handles) or for leisure (like televisions, Blu-ray players, games consoles, reclining chairs, or toys), all these things are examples of technology.</p>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
